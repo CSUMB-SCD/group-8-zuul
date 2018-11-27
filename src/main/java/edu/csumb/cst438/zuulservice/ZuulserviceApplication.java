@@ -28,7 +28,7 @@ public class ZuulserviceApplication {
 		config.addAllowedMethod("POST");
 		config.addAllowedMethod("DELETE");
 		config.addAllowedMethod("PATCH");
-		source.registerCorsConfiguration("/**", config);
+		source.registerCorsConfiguration("/product-service/**", config);
 		return new CorsFilter(source);
 	}
 	public static void main(String[] args) {
