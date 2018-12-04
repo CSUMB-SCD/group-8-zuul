@@ -29,8 +29,11 @@ public class ZuulserviceApplication {
 		config.addAllowedMethod("DELETE");
 		config.addAllowedMethod("PATCH");
 		source.registerCorsConfiguration("/product-service/**", config);
+		source.registerCorsConfiguration("/user-service/**", config);
+		source.registerCorsConfiguration("/finalize/**", config);
 		return new CorsFilter(source);
 	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(ZuulserviceApplication.class, args);
 	}
